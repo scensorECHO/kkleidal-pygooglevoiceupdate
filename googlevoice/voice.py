@@ -39,7 +39,7 @@ class Voice(object):
         except NameError:
             regex = r"('_rnr_se':) '(.+)'"
         try:
-	    content = urlopen(settings.INBOX).read()
+            content = urlopen(settings.INBOX).read()
             sp = re.search(regex, content).group(2)
         except AttributeError:
             sp = None
